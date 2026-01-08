@@ -1,0 +1,18 @@
+.post-container {
+  background-color: white;     /* خلفية الصندوق بيضاء */
+  border: 4px solid #2c7a7b;   /* حدود خضراء سميكة */
+  margin: 20px auto;           /* مسافة بين الصناديق وتوسيطها */
+  padding: 15px;               /* مسافة داخلية للنص */
+  width: 80%;                  /* عرض الصندوق */
+  text-align: center;          /* توسيط النصوص داخل الصندوق */
+}
+
+.post-title {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.post-body {
+  margin-top: 10px;
+  color: #555;
+}

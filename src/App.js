@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './assets/styles/App.css';
+// ملاحظة: تأكد أن أسماء المجلدات تطابق ما لديك (مثلاً Header و Post)
+import HeaderWeb from "./components/HeaderWeb"; 
+import Post from "./components/Post";             
+import SideMenu from "./components/SideMenu"; // تأكد من تصحيح اسم الملف إلى SideMenu.js
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div className='App'> 
+   <HeaderWeb/>
+    <div 
+
+    style={{ display: "flex",   }}> 
+      <div style={{ width: "60%" }}> <Post/> <Post/> <Post/> </div>
+      <div> <SideMenu/> </div>
+
     </div>
+   </div>
   );
 }
 
