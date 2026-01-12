@@ -1,11 +1,52 @@
 import React from 'react';
-import "./TagButtonstyle.css" 
-import TagButton from "./TagButton.js"
-export default function SideMenu() {
-  return (
-    <div style={{margin: "25px", border: "solid teal 5px"}}>
-      <TagButton/>
+import CategoryButton from './CategoryButton.js';
 
+
+export default function SideMenu() {
+
+  const generalList = generalData.map((item)=> 
+    <CategoryButton 
+      key={item.id} 
+      title={item.title} />);  
+  
+  const frontendList = frontendData.map((item)=> 
+    <CategoryButton 
+      key={item.id} 
+      title={item.title} />);  
+  const backendList = backendData.map((item)=> 
+    <CategoryButton 
+      key={item.id} 
+      title={item.title} />);  
+  
+  return (
+    <div style={{margin: "25px", borderBottom: "1px solid #eee", flexDirection:"column", display:"flex"}}>
+      <h4>The Roadmap</h4>
+      <h3>General</h3>
+      {generalList}
+      <h3>FrontEnd</h3>
+      {frontendList}
+      <h3>BackEnd</h3>
+      {backendList}
     </div>
   );
 }
+
+
+const generalData = [
+    { id: 1, title: "Instructions" },
+    { id: 2, title: "Scrum" },
+    { id: 3, title: "Git" }
+  ];
+
+  // 2. مصفوفة الفرونت إند
+  const frontendData = [
+    { id: 4, title: "JavaScript" },
+    { id: 5, title: "React" }
+  ];
+
+  // 3. مصفوفة الباك إند
+  const backendData = [
+    { id: 6, title: "SQL" },
+    { id: 7, title: "PHP" },
+    { id: 8, title: "Laravel" }
+  ];
