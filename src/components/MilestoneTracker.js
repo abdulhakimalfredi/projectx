@@ -33,10 +33,10 @@ export default function MilestoneTracker() {
             }}
           ></div>
         </div>
-        
+
         {/* المهمة 1.3: قائمة المواضيع */}
       <div className="topics-list" style={{ marginTop: "25px", textAlign: "left", padding: "0 10px" }}>
-        <ul style={{ listStyle: "none", padding: 0 }}>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0}}>
           
           {/* موضوع مكتمل */}
           <li className="topic-item completed" style={{ marginBottom: "10px", padding: "10px", borderBottom: "1px solid #eee" }}>

@@ -6,13 +6,10 @@ import TheRoadMap from "./components/TheRoadMap";
 import TaskItem from "./components/TaskItem";
 import Card from "./components/Card";
 import Instructions from "./components/Instructions";
-import {postsData} from "./components/KnowledgeBase";
 import MilestoneTracker from "./components/MilestoneTracker"
-
+import KnowledgeBase from "./components/KnowledgeBase";
 function App() {
-  const lessonsList = postsData.map((post) => (
-    <Post key={post.id} title={post.title} content={post.content} />
-  ));
+  
 
   // const tasksList = tasksData.map((task) => (
   //   <TaskItem key={task.id} title={task.title} isCompleted={task.isCompleted} />
@@ -41,7 +38,7 @@ function App() {
           <Card>
             <div className="lessons-container" style={{}}>
             <h3>The Knowledge Base</h3>
-              {lessonsList}
+              <KnowledgeBase/>
             </div>
           </Card>
         </main>
