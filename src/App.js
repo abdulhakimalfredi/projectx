@@ -2,20 +2,21 @@ import React from "react";
 import "./assets/styles/App.css";
 import HeaderWeb from "./components/HeaderWeb";
 import Post from "./components/Post";
-import SideMenu from "./components/SideMenu";
+import TheRoadMap from "./components/TheRoadMap";
 import TaskItem from "./components/TaskItem";
 import Card from "./components/Card";
 import Instructions from "./components/Instructions";
-import { postsData, tasksData } from "./components/RoadMap";
+import {postsData} from "./components/KnowledgeBase";
+import MilestoneTracker from "./components/MilestoneTracker"
 
 function App() {
   const lessonsList = postsData.map((post) => (
     <Post key={post.id} title={post.title} content={post.content} />
   ));
 
-  const tasksList = tasksData.map((task) => (
-    <TaskItem key={task.id} title={task.title} isCompleted={task.isCompleted} />
-  ));
+  // const tasksList = tasksData.map((task) => (
+  //   <TaskItem key={task.id} title={task.title} isCompleted={task.isCompleted} />
+  // ));
 
   return (
     <div className="App">
@@ -32,7 +33,7 @@ function App() {
         
         <aside className="sidebar-section">
           <Card>
-            <SideMenu />
+            <TheRoadMap />
           </Card>
         </aside>
 
@@ -47,8 +48,7 @@ function App() {
 
         <section className="tracker-section">
           <Card>
-            <h3>The Milestone Tracker</h3>
-            {tasksList}
+            <MilestoneTracker/>
           </Card>
         </section>
 

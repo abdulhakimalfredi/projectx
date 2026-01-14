@@ -27,8 +27,3 @@ export const postsData = [
     category: "Backend",
   },
 ];
-export const tasksData = [
-  { id: 1, title: "Content will be here...", isCompleted: true },
-  { id: 2, title: "Content will be here...", isCompleted: false },
-  { id: 3, title: "Content will be here...", isCompleted: false },
-];
