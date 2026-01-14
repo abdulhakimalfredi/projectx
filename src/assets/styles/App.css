@@ -1,3 +1,59 @@
+/* إعدادات عامة لمنع خروج العناصر عن الشاشة */
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  width: 100%;
+  max-width: 100vm; /* يضمن عدم تمدد الموقع بشكل مبالغ فيه */
+  margin: 0 auto;    /* لتوسط الصفحة */
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* يقتل أي تمدد أفقي مزعج */
+}
+
+/* تنسيق قسم التعليمات */
+.instructions-container {
+  background-color: whitesmoke;
   text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 10px solid #2c3e50;
+  border-right: 10px solid #2c3e50;
+}
+
+/* تنسيق توزيع الأقسام الثلاثة */
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 30px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* توزيع المساحات باحترافية */
+.sidebar-section {
+  flex: 1.2; /* يأخذ مساحة أقل */
+}
+
+.content-section {
+  flex: 2.5; /* يأخذ المساحة الأكبر في المنتصف */
+  text-align: center;
+}
+
+.tracker-section {
+  flex: 1.2; /* مساحة متوسطة للمتتبع */
+}
+
+/* لجعل الموقع متجاوب مع الشاشات الصغيرة */
+@media (max-width: 1024px) {
+  .main-layout {
+    flex-direction: column; /* الأقسام تترتب فوق بعضها في الجوال */
+  }
+  .sidebar-section, .content-section, .tracker-section {
+    width: 100%;
+  }
 }

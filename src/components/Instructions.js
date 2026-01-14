@@ -1,6 +1,6 @@
 const globalInstructions = { 
   id: 1, 
-  title: "General Instructions", 
+  title: "Instructions You Need To Consider", 
   // جعلنا المحتوى مصفوفة لنتمكن من عمل map عليها بالداخل
   content: [
     "Complete all courses ordered.",
@@ -21,6 +21,7 @@ const Inst = globalInstructions.content.map((point, index)=> (<li key={index}>{p
 export default function Instructions(){
     return (
         <div>
+            <h2>{globalInstructions.title}</h2>
             <ul> 
             {Inst}
             </ul>

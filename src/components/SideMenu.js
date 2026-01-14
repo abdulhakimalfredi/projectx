@@ -19,8 +19,8 @@ export default function SideMenu() {
       title={item.title} />);  
   
   return (
-    <div style={{margin: "25px", borderBottom: "1px solid #eee", flexDirection:"column", display:"flex"}}>
-      <h4>The Roadmap</h4>
+    <div style={{margin: "25px", flexDirection:"column", display:"flex",textAlign:"center"}}>
+      <h2>The Roadmap</h2>
       <h3>General</h3>
       {generalList}
       <h3>FrontEnd</h3>
