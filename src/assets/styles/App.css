@@ -78,3 +78,25 @@
   font-size: 1.5rem;
   margin-right: 10px;
 }
+
+/* App.css */
+.main-container {
+  display: flex;         /* تفعيل التوزيع الجانبي */
+  gap: 20px;            /* مسافة بين الأقسام */
+  padding: 20px;
+  align-items: stretch; /* تجعل الأطوال متساوية */
+  min-height: 100vh;    /* تأخذ طول الشاشة كاملاً */
+  background-color: #f5f7fa; /* لون خلفية خفيف لتمييز الأقسام */
+}
+
+.roadmap-section {
+  flex: 1;             /* تأخذ مساحة صغيرة (اليسار) */
+}
+
+.knowledge-base {
+  flex: 2.5;           /* تأخذ المساحة الأكبر (الوسط) */
+}
+
+.tracker-section {
+  flex: 1.2;           /* مساحة متوسطة (اليمين) */
+}

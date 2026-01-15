@@ -6,11 +6,9 @@ import TheRoadMap from "./components/TheRoadMap";
 import TaskItem from "./components/TaskItem";
 import Card from "./components/Card";
 import Instructions from "./components/Instructions";
-import MilestoneTracker from "./components/MilestoneTracker"
+import MilestoneTracker from "./components/MilestoneTracker";
 import KnowledgeBase from "./components/KnowledgeBase";
 function App() {
-  
-
   // const tasksList = tasksData.map((task) => (
   //   <TaskItem key={task.id} title={task.title} isCompleted={task.isCompleted} />
   // ));
@@ -24,32 +22,33 @@ function App() {
         <Instructions />
         <hr />
       </div>
-
-      {/* الحاوية الرئيسية للأقسام الثلاثة */}
-      <div className="main-layout">
-        
-        <aside className="sidebar-section">
-          <Card>
-            <TheRoadMap />
-          </Card>
-        </aside>
-
-        <main className="content-section">
-          <Card>
-            <div className="lessons-container" style={{}}>
-            <h3>The Knowledge Base</h3>
-              <KnowledgeBase/>
-            </div>
-          </Card>
-        </main>
-
-        <section className="tracker-section">
-          <Card>
-            <MilestoneTracker/>
-          </Card>
-        </section>
-
-      </div>
+      <Card>
+        <div className="main-container" style={{ textAlign: "center" }}>
+          {" "}
+          {/* الحاوية الكبرى */}
+          <div className="roadmap-section">
+            {" "}
+            <Card>
+              {" "}
+              <TheRoadMap />{" "}
+            </Card>{" "}
+          </div>
+          <div className="knowledge-base">
+            {" "}
+            <Card>
+              {" "}
+              <KnowledgeBase />{" "}
+            </Card>{" "}
+          </div>
+          <div className="tracker-section">
+            {" "}
+            <Card>
+              {" "}
+              <MilestoneTracker />{" "}
+            </Card>{" "}
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }

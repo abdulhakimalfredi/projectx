@@ -1,3 +1,4 @@
+import Card from "./Card";
 export default function MilestoneTracker() {
   return (
     <div>
@@ -33,9 +34,9 @@ export default function MilestoneTracker() {
             }}
           ></div>
         </div>
-
+       
         {/* المهمة 1.3: قائمة المواضيع */}
-      <div className="topics-list" style={{ marginTop: "25px", textAlign: "left", padding: "0 10px" }}>
+      <div className="topics-list" style={{ marginTop: "25px", textAlign: "left", padding: "0 10px"}}>
         <ul style={{ listStyle: "none", padding: 0, margin: 0}}>
           
           {/* موضوع مكتمل */}
@@ -56,16 +57,16 @@ export default function MilestoneTracker() {
           <li className="topic-item not-started" style={{ marginBottom: "10px", padding: "10px", borderBottom: "1px solid #eee", color: "#888" }}>
             ⏳ Topic 4 (Not Started)
           </li>
-          
         </ul>
-
       </div>
+      
       </div>
-
-      <div className="next-milestone" style={{ textAlign: "center" }}>
+            <Card> 
+      <div className="next-milestone" style={{ textAlign: "center"}}>
         <h3 style={{ textAlign: "center" }}>🏆 Next Milestone</h3>
         <p>Complete React Basics to unlock React Hooks!</p>
       </div>
+            </Card>
       
     </div>
   );
