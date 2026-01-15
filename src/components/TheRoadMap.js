@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryButton from "./CategoryButton.js";
 
-export default function SideMenu() {
+export default function TheRoadMap() {
   // const generalList = generalData.map((item) => (
   //   <CategoryButton key={item.id} title={item.title} />
   // ));

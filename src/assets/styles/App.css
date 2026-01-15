@@ -1,102 +1,193 @@
-/* إعدادات عامة لمنع خروج العناصر عن الشاشة */
+/* جعل جميع العناصر تحسب العرض والارتفاع مع الـ padding والـ border */
 * {
   box-sizing: border-box;
 }
 
+/* حاوية التطبيق الرئيسية */
 .App {
   width: 100%;
-  max-width: 100vm; /* يضمن عدم تمدد الموقع بشكل مبالغ فيه */
-  margin: 0 auto;    /* لتوسط الصفحة */
-  padding: 0 20px;
+  max-width: 100vw; /* منع التمدد الأفقي الزائد */
+  margin: 0 auto; /* توسيط المحتوى في الصفحة */
+  padding: 0 20px; /* مسافة داخلية من الجوانب */
   box-sizing: border-box;
-  overflow-x: hidden; /* يقتل أي تمدد أفقي مزعج */
+  overflow-x: hidden; /* إخفاء أي محتوى يتجاوز العرض */
 }
 
-/* تنسيق قسم التعليمات */
+/* صندوق التعليمات */
 .instructions-container {
   background-color: whitesmoke;
   text-align: center;
   border-radius: 5px;
   padding: 20px;
   margin: 20px 0;
-  border-left: 10px solid #2c3e50;
-  border-right: 10px solid #2c3e50;
+  border-left: 10px solid #2c3e50; /* إطار أيسر بلون داكن */
+  border-right: 10px solid #2c3e50; /* إطار أيمن بلون داكن */
 }
 
-/* تنسيق توزيع الأقسام الثلاثة */
+/* توزيع الأقسام الثلاثة بشكل أفقي */
 .main-layout {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 25px;
+  justify-content: space-between; /* توزيع المسافات بين الأقسام */
+  align-items: flex-start; /* محاذاة العناصر من الأعلى */
+  gap: 25px; /* مسافة بين كل قسم */
   margin-top: 30px;
   width: 100%;
-  align-items: flex-start;
 }
 
-/* توزيع المساحات باحترافية */
+/* القسم الجانبي الأيسر */
 .sidebar-section {
   flex: 1.2; /* يأخذ مساحة أقل */
 }
 
+/* القسم الأوسط (المحتوى الرئيسي) */
 .content-section {
-  flex: 2.5; /* يأخذ المساحة الأكبر في المنتصف */
+  flex: 2.5; /* يأخذ أكبر مساحة */
   text-align: center;
 }
 
+/* قسم التتبع على اليمين */
 .tracker-section {
-  flex: 1.2; /* مساحة متوسطة للمتتبع */
+  flex: 1.2; /* مساحة متوسطة */
 }
 
-/* لجعل الموقع متجاوب مع الشاشات الصغيرة */
+/* جعل التصميم متجاوب على الشاشات الصغيرة */
 @media (max-width: 1024px) {
   .main-layout {
-    flex-direction: column; /* الأقسام تترتب فوق بعضها في الجوال */
+    flex-direction: column; /* ترتيب الأقسام عمودياً بدلاً من أفقياً */
   }
   .sidebar-section, .content-section, .tracker-section {
-    width: 100%;
+    width: 100%; /* كل قسم يأخذ عرض الشاشة كاملاً */
   }
 }
 
-
-  
-/* هذا الكود سيطبق على كل البطاقات في جميع الأقسام */
+/* تنسيق البطاقات */
 .resource-card {
-  transition: all 0.3s ease; /* يجعل الحركة ناعمة */
-  cursor: pointer; /* يغير شكل الماوس ليد عند الوقوف على البطاقة */
+  transition: all 0.3s ease; /* حركة سلسة عند التفاعل */
+  cursor: pointer; /* تغيير شكل المؤشر إلى يد عند التمرير */
+  text-align: center;
 }
 
-/* تأثير عند مرور الماوس (Hover) */
+/* تأثير عند التمرير بالماوس فوق البطاقة */
 .resource-card:hover {
-  transform: translateY(-5px); /* يرفع البطاقة قليلاً */
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important; /* يقوي الظل */
-  border-color: #007bff; /* يغير لون الإطار للأزرق */
+  transform: translateY(-5px); /* رفع البطاقة للأعلى */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important; /* إضافة ظل أقوى */
+  border-color: #007bff; /* تغيير لون الإطار للأزرق */
 }
 
-/* تأثير الأيقونة داخل البطاقة */
+/* تنسيق الأيقونات داخل البطاقات */
 .resource-card span {
-  font-size: 1.5rem;
-  margin-right: 10px;
+  font-size: 1.5rem; /* حجم الأيقونة */
+  margin-right: 10px; /* مسافة بين الأيقونة والنص */
 }
 
-/* App.css */
+/* الحاوية الرئيسية للتطبيق */
 .main-container {
-  display: flex;         /* تفعيل التوزيع الجانبي */
-  gap: 20px;            /* مسافة بين الأقسام */
+  display: flex; /* توزيع الأقسام بشكل أفقي */
+  gap: 20px; /* مسافة بين الأقسام */
   padding: 20px;
-  align-items: stretch; /* تجعل الأطوال متساوية */
-  min-height: 100vh;    /* تأخذ طول الشاشة كاملاً */
-  background-color: #f5f7fa; /* لون خلفية خفيف لتمييز الأقسام */
+  align-items: stretch; /* جعل جميع الأقسام بنفس الارتفاع */
+  min-height: 100vh; /* الارتفاع الكامل للشاشة */
+  background-color: #f5f7fa; /* لون خلفية فاتح */
 }
 
+/* قسم خارطة الطريق */
 .roadmap-section {
-  flex: 1;             /* تأخذ مساحة صغيرة (اليسار) */
+  flex: 1; /* مساحة صغيرة */
 }
 
+/* قسم قاعدة المعرفة */
 .knowledge-base {
-  flex: 2.5;           /* تأخذ المساحة الأكبر (الوسط) */
+  flex: 2.5; /* أكبر مساحة */
 }
 
+/* قسم المتتبع */
 .tracker-section {
-  flex: 1.2;           /* مساحة متوسطة (اليمين) */
+  flex: 1.2; /* مساحة متوسطة */
+}
+
+/* تنسيق البطاقة */
+.resource-card {
+  border-radius: 10px; /* زوايا دائرية */
+  padding: 15px; /* مسافة داخلية */
+  margin-bottom: 15px; /* مسافة أسفل كل بطاقة */
+  background-color: #fff; /* خلفية بيضاء */
+  display: flex;
+  flex-direction: column; /* ترتيب المحتوى عمودياً */
+  gap: 15px; /* مسافة بين العناصر الداخلية */
+  border: 1px solid #e0e0e0; /* إطار رمادي فاتح */
+}
+
+/* الحاوية الكبرى */
+.knowledge-base-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* الأقسام الرئيسية */
+.General-Section, .FrontEnd-Section, .BackEnd-Section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+/* عناوين الأقسام */
+.section-title {
+  color: #1a202c;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-left: 5px solid #ff9800;
+  padding-left: 15px;
+}
+
+/* المجموعات داخل الأقسام (مثل Scrum أو Git) */
+.topic-group {
+  margin-bottom: 25px;
+}
+
+.topic-group h3 {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* سطر الرابط والزر - أهم جزء في الترتيب */
+.resource-row {
+  display: flex;
+  justify-content: space-between; /* النص يسار والزر يمين */
+  align-items: center;
+  background-color: #f8fafc;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.resource-row:hover {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* ستايل الروابط */
+.resource-link {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1; /* يجعل الرابط يأخذ كل المساحة المتاحة قبل الزر */
+}
+
+.resource-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
