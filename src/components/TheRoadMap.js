@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryButton from "./CategoryButton.js";
+import App from "../App.js";
 
 export default function TheRoadMap() {
   // const generalList = generalData.map((item) => (

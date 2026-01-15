@@ -1,6 +1,6 @@
 import CategoryButton from "./CategoryButton";
 
-export default function KnowledgeBase() {
+export default function KnowledgeBase(activeCategory) {
   return (
     <div className="knowledge-base-container">
       {/* القسم العام - General */}
