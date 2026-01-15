@@ -191,3 +191,65 @@
   color: #1d4ed8;
   text-decoration: underline;
 }
+
+.instructions-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.instructions-title {
+    text-align: center;
+    color: #453129;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff9800;
+    display: table; /* لجعل الخط تحت النص فقط */
+    margin: 0 auto 25px auto;
+}
+
+.instructions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ترتيب تلقائي حسب العرض */
+    gap: 15px;
+}
+
+.instruction-item {
+    background-color: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.instruction-item:hover {
+    transform: scale(1.02);
+    border-color: #ff9800;
+    background-color: #fff;
+}
+
+.bullet-number {
+    background-color: #453129;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0; /* يمنع الدائرة من التمدد */
+}
+
+.instruction-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}

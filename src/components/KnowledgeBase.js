@@ -65,12 +65,22 @@ export default function KnowledgeBase() {
         <h2 className="section-title">Back-End Development</h2>
         <div className="topic-group">
           <h3>SQL Database</h3>
-          {["SQL 101", "SQL 102", "SQL 103"].map((item, index) => (
-            <div className="resource-row" key={index}>
-              <a href="#" className="resource-link">{item}</a>
-              <CategoryButton title="Done ✓" onClick={() => {}} />
-            </div>
-          ))}
+          <div className="resource-row">
+            <a href="https://satr.tuwaiq.edu.sa/course/FtkmhtJpQW/view" className="resource-link">SQL 101</a>
+            <CategoryButton title="Done ✓" onClick={() => {}} />
+          </div>
+          <div className="resource-row">
+            <a href="https://satr.tuwaiq.edu.sa/course/APjgdQqVWR/view" className="resource-link">SQL 102</a>
+            <CategoryButton title="Done ✓" onClick={() => {}} />
+          </div>
+          <div className="resource-row">
+            <a href="https://satr.tuwaiq.edu.sa/course/bOXiOFzkMv/view" className="resource-link">SQL 103</a>
+            <CategoryButton title="Done ✓" onClick={() => {}} />
+          </div>
+          <div className="resource-row">
+            <a href="https://www.datacamp.com/tutorial/normalization-in-dbms" className="resource-link">Normalization in DBMS (article)</a>
+            <CategoryButton title="Done ✓" onClick={() => {}} />
+          </div>
         </div>
 
         <div className="topic-group">
