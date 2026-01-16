@@ -1,7 +1,6 @@
 import React from "react";
 import CategoryButton from "./CategoryButton.js";
-import App from "../App.js";
-
+لهف 
 export default function TheRoadMap({ setActivePath }) {
   // const generalList = generalData.map((item) => (
   //   <CategoryButton key={item.id} title={item.title} />
