@@ -1,12 +1,14 @@
 import CategoryButton from "./CategoryButton";
 
-export default function KnowledgeBase(activeCategory) {
+export default function KnowledgeBase({ActivePath}) {
   return (
-    <div className="knowledge-base-container">
+      <div className="knowledge-base-container">
       {/* القسم العام - General */}
+      <div> 
+ {ActivePath.id === "General" && (
       <div className="General-Section">
-        <h2 className="section-title">General & Basics</h2>
-        
+        <h2 className="section-title">gerenal</h2>
+       
         <div className="topic-group">
           <h3>Scrum</h3>
           <div className="links-list">
@@ -29,6 +31,7 @@ export default function KnowledgeBase(activeCategory) {
           </div>
         </div>
 
+
         <div className="topic-group">
           <h3>Git</h3>
           <div className="links-list">
@@ -42,11 +45,15 @@ export default function KnowledgeBase(activeCategory) {
             </div>
           </div>
         </div>
+      </div> 
+ )}
       </div>
-
-      {/* قسم الفرونت إند - Front-End */}
+     
+       <div>
+           {/* قسم الفرونت إند - Front-End */} 
+          {ActivePath.id === "FrontEnd" && (
       <div className="FrontEnd-Section">
-        <h2 className="section-title">Front-End Development</h2>
+        <h2 className="section-title">frontend</h2>
         <div className="topic-group">
           <h3>JavaScript & React</h3>
           <div className="resource-row">
@@ -57,12 +64,19 @@ export default function KnowledgeBase(activeCategory) {
             <a href="https://www.youtube.com/playlist?list=PLYyqC4bNbCIdSZ-JayMLl4WO2Cr995vyS" className="resource-link">React Course</a>
             <CategoryButton title="Done ✓" onClick={() => {}} />
           </div>
-        </div>
+        </div> 
       </div>
 
+)}
+       </div>
+
+
+          
+
       {/* قسم الباك إند - Back-End */}
+      <div> {ActivePath.id === "BackEnd" &&(
       <div className="BackEnd-Section">
-        <h2 className="section-title">Back-End Development</h2>
+        <h2 className="section-title">Back-end</h2>
         <div className="topic-group">
           <h3>SQL Database</h3>
           <div className="resource-row">
@@ -94,6 +108,8 @@ export default function KnowledgeBase(activeCategory) {
             <CategoryButton title="Done ✓" onClick={() => {}} />
           </div>
         </div>
+      </div>
+)}
       </div>
     </div>
   );

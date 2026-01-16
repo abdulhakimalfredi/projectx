@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./assets/styles/App.css";
 import HeaderWeb from "./components/HeaderWeb";
 import Post from "./components/Post";
@@ -12,6 +12,13 @@ function App() {
   // const tasksList = tasksData.map((task) => (
   //   <TaskItem key={task.id} title={task.title} isCompleted={task.isCompleted} />
   // ));
+  // نجعل الحالة تبدأ بقسم واحد فقط (الافتراضي)
+// القيمة الابتدائية هي "كائن" للقسم الأول فقط
+const [ActivePath, setActivePath] = useState({
+  id: "General",
+  id: "FrontEnd",
+  id: "BackEnd",
+});
 
   return (
     <div className="App">
@@ -19,7 +26,7 @@ function App() {
 
       {/* قسم التعليمات */}
       <div className="instructions-container">
-        <Instructions />
+        <Instructions ActivePath={ActivePath} />
         <hr />
       </div>
       <Card>
@@ -30,14 +37,14 @@ function App() {
             {" "}
             <Card>
               {" "}
-              <TheRoadMap />{" "}
+              <TheRoadMap setActivePath={setActivePath} />{" "}
             </Card>{" "}
           </div>
           <div className="knowledge-base">
             {" "}
             <Card>
               {" "}
-              <KnowledgeBase />{" "}
+              <KnowledgeBase ActivePath={ActivePath} />{" "}
             </Card>{" "}
           </div>
           <div className="tracker-section">

@@ -2,7 +2,7 @@ import React from "react";
 import CategoryButton from "./CategoryButton.js";
 import App from "../App.js";
 
-export default function TheRoadMap() {
+export default function TheRoadMap({ setActivePath }) {
   // const generalList = generalData.map((item) => (
   //   <CategoryButton key={item.id} title={item.title} />
   // ));
@@ -24,9 +24,22 @@ export default function TheRoadMap() {
       }}
     >
       <h2>The Roadmap</h2>
-      <CategoryButton title="General"/>
-      <CategoryButton title="FrontEnd"/>
-      <CategoryButton title="BackEnd"/>
+      <CategoryButton
+        title="General"
+        onClick={() => setActivePath({ id: "General", title: "General & Basics" })}
+      />
+      <CategoryButton
+        title="FrontEnd"
+        onClick={() =>
+          setActivePath({ id: "FrontEnd", title: "Front-End Development" })
+        }
+      />
+      <CategoryButton
+        title="BackEnd"
+        onClick={() =>
+          setActivePath({ id: "BackEnd", title: "Back-End Development" })
+        }
+      />
     </div>
   );
 }
