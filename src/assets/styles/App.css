@@ -253,3 +253,98 @@
     color: #555;
     line-height: 1.4;
 }
+
+
+/* حاوية Milestone Tracker الرئيسية */
+.milestone-tracker-container {
+  text-align: center;
+}
+
+/* عنوان Milestone Tracker */
+.milestone-tracker-title {
+  text-align: center;
+}
+
+/* قسم التقدم */
+.progress-section {
+  text-align: center;
+}
+
+/* نسبة التقدم الكبيرة */
+.progress-percentage {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* نص عدد المهام المكتملة */
+.progress-completed-text {
+  color: #666;
+}
+
+/* نص "Progress Bar" */
+.progress-bar-label {
+  margin-bottom: 10px;
+}
+
+/* حاوية شريط التقدم */
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background: #8f9090ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* التعبئة داخل شريط التقدم */
+.progress-fill {
+  height: 100%;
+  background: #162432ff;
+  transition: width 0.5s ease-in-out;
+}
+
+/* قائمة المواضيع */
+.topics-list {
+  margin-top: 25px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* إزالة النقاط من القائمة */
+.topics-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* عنصر الموضوع الأساسي */
+.topic-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* موضوع مكتمل */
+.topic-item.completed {
+  /* يمكن إضافة تنسيق إضافي هنا */
+}
+
+/* موضوع قيد التنفيذ */
+.topic-item.in-progress {
+  color: #0056b3;
+}
+
+/* موضوع لم يبدأ */
+.topic-item.not-started {
+  color: #888;
+}
+
+/* قسم Next Milestone */
+.next-milestone {
+  text-align: center;
+}
+
+/* عنوان Next Milestone */
+.next-milestone-title {
+  text-align: center;
+}
