@@ -9,16 +9,8 @@ import Instructions from "./components/Instructions";
 import MilestoneTracker from "./components/MilestoneTracker";
 import KnowledgeBase from "./components/KnowledgeBase";
 function App() {
-  // const tasksList = tasksData.map((task) => (
-  //   <TaskItem key={task.id} title={task.title} isCompleted={task.isCompleted} />
-  // ));
-  // نجعل الحالة تبدأ بقسم واحد فقط (الافتراضي)
-// القيمة الابتدائية هي "كائن" للقسم الأول فقط
-const [ActivePath, setActivePath] = useState({
-  id: "General",
-  id: "FrontEnd",
-  id: "BackEnd",
-});
+
+const [ActivePath, setActivePath] = useState({});
 
   return (
     <div className="App">
