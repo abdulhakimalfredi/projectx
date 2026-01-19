@@ -121,7 +121,7 @@ export default function KnowledgeBase({ActivePath}) {
               <input type="checkbox"/>
             </div>
             <div className="resource-row">
-              <a href="#" className="resource-link">Laravel Framework</a>
+              <a href="#" className="resource-link" >Laravel Framework </a>
               <input type="checkbox"/>
             </div>
           </div>
