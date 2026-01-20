@@ -1,5 +1,4 @@
-import CategoryButton from "./CategoryButton";
-import { topicsData } from "./topicsData";
+
 export default function KnowledgeBase({
   ActivePath,
   setCompletedTopics,

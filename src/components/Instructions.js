@@ -12,7 +12,6 @@ const globalInstructions = {
   "Please take your time to learning and be focused, do not hurry because this will make you learn nothing." ]
 };
 
-const Inst = globalInstructions.content.map((instruction, index)=> (<li key={index}>{instruction}</li>))
 
 export default function Instructions(){
     return (

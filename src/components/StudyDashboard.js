@@ -1,4 +1,3 @@
-import { topicsData } from "./topicsData";
 
 export default function StudyDashboard({ completedTopics, topicsData }) {
   const totalTopics = topicsData.length;

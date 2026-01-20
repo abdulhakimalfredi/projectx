@@ -12,7 +12,12 @@
   box-sizing: border-box;
   overflow-x: hidden; /* إخفاء أي محتوى يتجاوز العرض */
 }
-
+.headerWeb {
+    background-color: #2c7a7b; 
+    color: white;             
+    padding: 20px;
+    text-align: center;
+}
 /* صندوق التعليمات */
 .instructions-container {
   background-color: whitesmoke;
