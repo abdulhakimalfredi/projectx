@@ -348,3 +348,104 @@
 .next-milestone-title {
   text-align: center;
 }
+
+/* --- حاوية الدروس الرئيسية --- */
+.knowledge-base-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- تصميم كرت الدرس الواحد --- */
+.topic-row {
+  display: flex;
+  background: #ffffff;
+  padding: 15px 50px;
+  border-radius: 25px;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  white-space: nowrap; /* يمنع النص من النزول لسطر جديد */
+  width: 100%;        /* التأكد من أن الصف يأخذ العرض الكامل */
+
+  /* --- تصميم الرابط --- */
+  .topic-link {
+    color: #007bff; /* لون أزرق ليعرف أنه رابط */
+    text-decoration: none; /* إزالة الخط السفلي الافتراضي */
+    margin-left: 10px;
+    transition: color 0.2s ease;
+    
+    
+  }
+  
+}
+
+.topic-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: #007bff;
+}
+
+/* --- حالة الدرس المكتمل --- */
+.topic-row.completed-item {
+  background-color: #f8fff9;
+  border-color: #c3e6cb;
+}
+
+.topic-row.completed-item .topic-link {
+  color: #6c757d;
+  text-decoration: line-through;
+  opacity: 0.7;
+
+}
+
+
+.topic-link:hover {
+  text-decoration: underline; /* يظهر خط تحت الكلام عند تمرير الماوس */
+  color: #0056b3; /* يغمق اللون قليلاً */
+}
+
+/* --- تصميم الـ Checkbox --- */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #28a745; /* لون علامة الصح */
+}
+
+/* --- تصميم الداشبورد والنسبة المئوية --- */
+.dashboard-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  appearance: none;
+  margin-top: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #162432ff, #162432ff);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* --- عنوان القسم --- */
+.section-title {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
