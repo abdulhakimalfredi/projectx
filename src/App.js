@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./assets/styles/App.css";
 import HeaderWeb from "./components/HeaderWeb";
-import Post from "./components/Post";
 import TheRoadMap from "./components/TheRoadMap";
-import TaskItem from "./components/TaskItem";
 import Card from "./components/Card";
 import Instructions from "./components/Instructions";
-import MilestoneTracker from "./components/MilestoneTracker";
 import KnowledgeBase from "./components/KnowledgeBase";
-import LearnRoute from "./components/LearnRoute";
 import { topicsData } from "./components/topicsData";
 import StudyDashboard from "./components/StudyDashboard";
 function App() {
@@ -52,10 +48,12 @@ function App() {
             {" "}
             <Card>
               {" "}
-              <KnowledgeBase ActivePath={ActivePath} 
-        topicsData={topicsData} 
-        completedTopics={completedTopics} 
-        setCompletedTopics={setCompletedTopics} />{" "}
+              <KnowledgeBase
+                ActivePath={ActivePath}
+                topicsData={topicsData}
+                completedTopics={completedTopics}
+                setCompletedTopics={setCompletedTopics}
+              />{" "}
             </Card>{" "}
           </div>
           <div className="tracker-section">
