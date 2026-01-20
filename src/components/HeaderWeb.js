@@ -15,7 +15,7 @@ export default function HeaderWeb() {
             }}>
         <h1 style={{textAlign:"center"}}>Full-Stack Developer 
             <br/>
-            Your jouerny start from here..
+            Your Jouerny Start From Here..
             </h1>
         </div>
     );
