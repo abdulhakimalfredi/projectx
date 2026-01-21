@@ -1,6 +1,5 @@
 
-
-export default function HeaderWeb() {
+export default function HeaderWeb({userName}) {
     return( 
         <div style={{
             width: "100%", 
@@ -15,7 +14,7 @@ export default function HeaderWeb() {
             }}>
         <h1 style={{textAlign:"center"}}>Full-Stack Developer 
             <br/>
-            Your Jouerny Start From Here..
+            Your Jouerny Start From Here {userName}
             </h1>
         </div>
     );

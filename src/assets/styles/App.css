@@ -454,3 +454,61 @@ progress::-webkit-progress-value {
   margin-bottom: 20px;
   font-weight: 700;
 }
+
+.Input-Welcome{
+  width: 200px;
+  padding: 12px 20px;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  border: 2px solid #e0e0e0; /* لون رمادي هادئ */
+  border-radius: 12px;      /* زوايا دائرية عصرية */
+  outline: none;            /* إزالة الإطار الافتراضي المزعج */
+  transition: all 0.3s ease; /* سر الحركة في التغيير */
+  background-color: #f9f9f9;
+  text-align: center;
+  
+}
+.Input-Welcome:focus {
+  border-color: #0b325e;    /* يتغير للون الأزرق أو لون مشروعك */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(3, 27, 55, 0.2); /* توهج بسيط */
+  transform: scale(1.02);   /* يكبر الحقل بنسبة بسيطة جداً */
+}
+
+/* تنسيق النص التوضيحي (Placeholder) */
+.Input-Welcome::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.Welcome-BTN{
+  padding: 12px 30px;
+  background-color: #6883a2;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+
+}
+.Welcome-BTN:hover{
+  background-color: #05294c; /* يصبح أغمق عند التمرير */
+}
+
+.FirstPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* يوسط العناصر عمودياً */
+  text-align: center;
+  gap: 5px;                /* المسافة بين العناصر */
+  height: 100vh;           /* يأخذ طول الشاشة بالكامل ليتحقق التوسط */
+  background-color: whitesmoke;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
